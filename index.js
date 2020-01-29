@@ -5,20 +5,28 @@ const server = express()
 server.use(express.json())
 
 const projects = []
-let countReqs = 0
 
-server.use((req, res, next) => {
-    console.log(++countReqs)
+let countReqs = 0
+const countRequests = (req, res, next) => {
+    countReqs++
+
+    const countReqsMessage = countReqs === 1 
+        ? `${countReqs} requisição feita`
+        : `${countReqs} requisições feitas`
+
+    console.log(countReqsMessage)
 
     return next()
-})
+}
+
+server.use(countRequests)
 
 const checkProjectExists = (req, res, next) => {
     const { id } = req.params
 
-    const projectFiltered = projects.filter(p => p.id === id)
+    const project = projects.find(p => p.id === id)
 
-    if(projectFiltered.length === 0){
+    if(!project){
         return res.status(400).json({error: 'Projeto não encontrado!'})
     }
 
@@ -48,11 +56,9 @@ server.post('/projects/:id/tasks', checkProjectExists, (req, res) => {
     const { id } = req.params
     const { title } = req.body
 
-    projects.forEach((p, index) => {
-        if(p.id === id){
-            projects[index].tasks.push(title) 
-        }
-    })
+    const project = projects.find(p => p.id === id)
+
+    project.tasks.push(title)
 
     return res.json(projects)
 })
@@ -61,11 +67,9 @@ server.put('/projects/:id', checkProjectExists, (req, res) => {
     const { id } = req.params
     const { title } = req.body
 
-    projects.forEach((p, index) => {
-        if(p.id === id){
-            projects[index].title = title  
-        }
-    })
+    const project = projects.find(p => p.id === id)
+
+    project.title = title
 
     return res.json(projects)
 })
@@ -73,11 +77,9 @@ server.put('/projects/:id', checkProjectExists, (req, res) => {
 server.delete('/projects/:id', checkProjectExists, (req, res) => {
     const { id } = req.params
 
-    projects.forEach((p, index) => {
-        if(p.id === id){
-            projects.splice(index, 1) 
-        }
-    })
+    const projectIndex = projects.findIndex(p => p.id === id)
+
+    projects.splice(projectIndex, 1)
 
     return res.send()
 })
