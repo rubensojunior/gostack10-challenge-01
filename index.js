@@ -38,4 +38,16 @@ server.put('/projects/:id', (req, res) => {
     return res.json(projects)
 })
 
+server.delete('/projects/:id', (req, res) => {
+    const { id } = req.params
+
+    projects.forEach((p, index) => {
+        if(p.id === id){
+            projects.splice(index, 1) 
+        }
+    })
+
+    return res.send()
+})
+
 server.listen(3000)
