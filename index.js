@@ -25,6 +25,19 @@ server.post('/projects', (req, res) => {
     return res.json(projects)
 })
 
+server.post('/projects/:id/tasks', (req, res) => {
+    const { id } = req.params
+    const { title } = req.body
+
+    projects.forEach((p, index) => {
+        if(p.id === id){
+            projects[index].tasks.push(title) 
+        }
+    })
+
+    return res.json(projects)
+})
+
 server.put('/projects/:id', (req, res) => {
     const { id } = req.params
     const { title } = req.body
