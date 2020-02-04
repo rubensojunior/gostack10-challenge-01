@@ -1,26 +1,53 @@
-<h1 align="center">
-    <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" width="200px" />
-</h1>
-
-<h3 align="center">
-  Desafio 1: Conceitos do NodeJS
-</h3>
-
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-01?color=%2304D361">
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
-
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-01?style=social">
-  </a>
+  <a href="" rel="noopener">
+ <img width=200px src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" alt="Project logo"></a>
 </p>
 
-## :rocket: Sobre o desafio
+<h3 align="center">Desafio 01: Desenvolvendo APIs e Middlewares</h3>
 
-Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [Express](https://expressjs.com/pt-br/).
+<div align="center">
 
-### Rotas
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/languages/count/fcsouza/challenges-and-modules-rocketseat)]()
+[![GitHub Pull Requests](https://img.shields.io/github/last-commit/fcsouza/challenges-and-modules-rocketseat)]()
+[![Made By](https://img.shields.io/badge/Made%20By-Fabricio%20Cavalcante-brightgreen)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+---
+
+<p align="center"> API RESTful que manipula um array de projetos e suas tarefas usando Node.Js + Express simulando operações de CRUD.
+    <br> 
+</p>
+
+## 📝 Conteúdo
+<p align="center">
+<a href="#about">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#getting_started">Iniciando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#installing">Instalando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#usage">Uso</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#built_using">Tecnologias Utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#authors">Autor</a>
+</p>
+
+
+## 🧐 Sobre <a name = "about"></a>
+
+Resolução do desafio 01 da Gostack 10º, onde deveríamos criar um CRUD utilizando Node.Js e Express e utilizar middlewares de validações nas rotas.
+
+## 🏁 Iniciando <a name = "getting_started"></a>
+
+Instruções de como acessar as rotas e instalação.
+
+### :nut_and_bolt: Instalando <a name = "installing"></a>
+
+```
+yarn install
+yarn dev
+```
+
+## 🎈 Uso <a name="usage"></a>
 
 - `POST /projects`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
 
@@ -32,27 +59,11 @@ Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [
 
 - `POST /projects/:id/tasks`: A rota deve receber um campo `title` e armazenar uma nova tarefa no array de tarefas de um projeto específico escolhido através do `id` presente nos parâmetros da rota;
 
-### Exemplo
+## ⛏️ Tecnologias Utilizadas <a name = "built_using"></a>
 
-Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` e a rota `POST /projects/1/tasks` com `{ title: 'Nova tarefa' }`, meu array de projetos deve ficar assim:
+- [Express](https://expressjs.com/) - Server Framework
+- [NodeJs](https://nodejs.org/en/) - Backend
 
-```js
-[
-  {
-    id: "1",
-    title: "Novo projeto",
-    tasks: ["Nova tarefa"]
-  }
-];
-```
+## ✍️ Autor <a name = "authors"></a>
 
-### Middlewares
-
-- Crie um middleware que será utilizado em todas rotas que recebem o ID do projeto nos parâmetros da URL que verifica se o projeto com aquele ID existe. Se não existir retorne um erro, caso contrário permita a requisição continuar normalmente;
-
-- Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
-
-## :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
+- [@rubensojunior](https://github.com/rubensojunior)
