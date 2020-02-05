@@ -38,8 +38,7 @@ server.get('/projects', (req, res) => {
 })
 
 server.post('/projects', (req, res) => {
-    const { id } = req.body
-    const { title } = req.body
+    const { id, title } = req.body
 
     const project = {
         id,
