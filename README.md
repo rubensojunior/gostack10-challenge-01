@@ -42,7 +42,7 @@ Abaixo estão descritas as rotas do sistema.
 
   #### - Projects (/projects)
   
-  | Resource | Method | Params (JSON) | Headers |
+  | Resource | Method | Body (JSON) | Headers |
 | :---:      | :---:  |    :---:      |    :---: |
 | /projects    | GET   | {/} | {/} |
 | /projects    | POST    | {id, title} | {/} |
