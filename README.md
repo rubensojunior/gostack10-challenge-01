@@ -1,44 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+<img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
+
+<h1 align="center">
+<br>
+Rocketseat - GoStack 10 - Challenge 01
+</h1>
+
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/bootcamp-header.png" alt="Project logo"></a>
+This project was created to solve a challenge requested by Rocketseat. 
+Gostack is immersive training in technologies, react and react natively.</p>
+
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
 </p>
 
-<h3 align="center">Desafio 01: Desenvolvendo APIs e Middlewares</h3>
+<hr />
 
-<div align="center">
+## Features
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/languages/count/fcsouza/challenges-and-modules-rocketseat)]()
-[![GitHub Pull Requests](https://img.shields.io/github/last-commit/fcsouza/challenges-and-modules-rocketseat)]()
-[![Made By](https://img.shields.io/badge/Made%20By-Fabricio%20Cavalcante-brightgreen)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+- Features can be accessed by routes below.
 
-</div>
+- This project does not have a database and is only for the purpose of understanding how node route calls work.
 
----
+- 💹 **Node Js** — A web framework for Node Js
 
-<p>Esse desafio é o primeiro desafio da GoStack da rocketseat, tendo como objetivo colocar os conceitos iniciais de express e node à prova.</p>
-
-## :rocket: Sobre o desafio
-
-O objetivo do desafio é utilizar o conceito de rotas, portanto, os dados ainda estão sendo manipulados diretamente na aplicação, sem utilizar banco de dados.
-
-
-### **Um pouco sobre as ferramentas**
-
-- Express;
-- Sucrase + Nodemon;
-
-
-### **Inicializar API**
-
-- yarn dev
-- yarn dev:debug (verificar pasta .vscode para configurações)
-
-
-### **Rotas**
-
-Abaixo estão descritas as rotas do sistema.
+### **Routes**
 
   #### - Projects (/projects)
   
@@ -50,10 +48,16 @@ Abaixo estão descritas as rotas do sistema.
 | /projects/:id    | PUT    | {title} | {/} |
 | /projects/:id    | DELETE    | {/} | {/} |
 
-## :memo: Licença
+## Getting started
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+- Clone project > enter the project folder
+- run `yarn`
+- run `yarn dev`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
 
 ---
 
-Proposto com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Created with passion by me 👨🏻‍💻
